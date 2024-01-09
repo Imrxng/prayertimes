@@ -1,0 +1,191 @@
+:root{
+    --themecolor: #007A5E;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+
+header{
+    background-color: var(--themecolor);
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+
+main section img{
+    margin: 0 0 2rem 0;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 10rem;
+    background-color: var(--themecolor);
+    font-weight: bolder;
+    color: white;
+    margin-top: 10rem;
+    grid-area: footer;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--themecolor);
+    margin-bottom: 6%;
+    text-transform: uppercase;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    font-weight: bolder;
+    color: white;
+}
+
+nav ul li a{
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: grey;
+}
+
+.formDecor{
+    color: var(--themecolor);    
+    border: var(--themecolor) 2px solid;
+    padding-left: 1rem;
+}
+
+#naamMoskee, #adresMoskee{
+    padding: 0.5rem;
+}
+
+#naamMoskee{
+    margin-bottom: 3px;
+}
+
+.submitform{
+    border: var(--themecolor) solid;
+    background-color: var(--themecolor);
+    color: white;
+    padding: 5px;
+}
+
+#submitGebedstijden{
+    border: var(--themecolor) solid;
+    background-color: var(--themecolor);
+    color: white;
+    padding: 5px;
+}
+
+#articleMoskeeen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+
+#logoTop{
+    width: 8%;
+}
+
+#koran{
+    width: 80%;
+    background-color: beige;
+    text-align: right;
+    padding: 1rem;
+    font-size: 45px;
+}
+
+#gebedstijden, #mainKoran{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gebedstijden{
+    border-top: var(--themecolor) 2px solid;
+    border-bottom: var(--themecolor) 2px solid;
+}
+
+#formGebedstijden{
+    margin-top: 4rem;
+}
+
+#map{
+    height: 500px;
+}
+
+
+
+
+@media only screen and (max-width:700px){
+    footer{
+        font-size: 15px;
+    }
+    
+    h1{
+        margin: 5rem 0 5rem 0;
+        font-size: 3rem;
+    }
+    
+    ul, #articleMoskeeen{
+        flex-direction: column;
+    }
+
+    #logoTop{
+        width: 20%;
+    }
+
+    #submitMoskeeen, .formDecor{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #selectMoskeeen{
+        padding: 1rem;
+    }
+
+    #map{
+        height: 350px;
+    }
+    main section img, main section{
+        gap: 0;
+    }
+
+    main section img{
+        margin: 0 0 5rem 0;
+    }
+
+    form{
+        margin-top: 5rem;
+    }
+    
+   
+}
