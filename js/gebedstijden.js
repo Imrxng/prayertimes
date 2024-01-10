@@ -11,4 +11,3 @@ document.getElementById('submitGebedstijden').addEventListener('click', function
         prayerTimesPicture.src = `./assets/images/${monthSelected}.webp`;
     }
 });
-
