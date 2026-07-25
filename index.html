@@ -3,50 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/icons/favicon.webp" type="image/x-icon">
-    <title></title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/gebedstijden.js" defer></script>
+    <meta name="theme-color" content="#0b6338">
+    <meta name="description" content="Bekijk de EMB-gebedskalender 2026 per maand, volledig geoptimaliseerd voor desktop en mobiel.">
+    <link rel="shortcut icon" href="./assets/icons/favicon.webp" type="image/webp">
+    <title>Gebedstijden 2026 | EMB</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/gebedstijden.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <img src="./assets/icons/Logo.webp" alt="" id="logoTop">
-                <li><a href="index.html">Gebedstijden</a></li>
-            </ul>
-        </nav>
+    <span id="boven" class="top-anchor" aria-hidden="true"></span>
+    <a class="skip-link" href="#kalender">Ga naar de kalender</a>
+
+    <header class="site-header">
+        <div class="nav-shell">
+            <a class="brand" href="#boven" aria-label="Gebedstijden 2026 – startpagina">
+                <img src="./assets/icons/Logo.webp" alt="EMB-logo" width="52" height="52">
+                <span class="brand-copy">
+                    <strong>Gebedstijden</strong>
+                    <small>Kalender 2026</small>
+                </span>
+            </a>
+
+            <nav aria-label="Hoofdnavigatie">
+                <a class="nav-link" href="#kalender">Kalender bekijken</a>
+            </nav>
+        </div>
     </header>
-<main>
-    <h1>Gebedstijden</h1>
-    <section id="gebedstijden">
-        <form action="#" method="get" class="formDecor" id="formGebedstijden">
-            <label for="maanden">Maand: </label>
-            <select name="maanden" id="maanden">
-                <option value="" selected disabled>selecteer</option>
-                <option value="1">januari</option>
-                <option value="2">februari</option>
-                <option value="3">maart</option>
-                <option value="4">april</option>
-                <option value="5">mei</option>
-                <option value="6">juni</option>
-                <option value="7">juli</option>
-                <option value="8">augustus</option>
-                <option value="9">september</option>
-                <option value="10">oktober</option>
-                <option value="11">november</option>
-                <option value="12">december</option>
-            </select>
-            <input type="submit" id="submitGebedstijden" class="submitform" value="Bekijk">
-        </form><br><br>
-        <img src="/assets/images/1.webp" id="gebedstijdenFoto" alt="" width="400px" height="550px"> 
-    </section>
-</main>
-<footer>
-    <p>&copy; Rechten voorbehouden</p>
-    <p>|</p> 
-    <a href="#logoTop">Terug naar boven</a> 
-</footer>
+
+    <main>
+        <section class="hero" aria-labelledby="page-title">
+            <div class="hero-content">
+                <span class="eyebrow">Executief van de Moslims van België</span>
+                <h1 id="page-title">Gebedstijden<br><span>2026</span></h1>
+                <p>Bekijk eenvoudig de maandelijkse gebedskalender. De huidige maand wordt automatisch geopend en je kunt snel bladeren, vergroten of downloaden.</p>
+
+                <div class="hero-meta" aria-label="Eigenschappen">
+                    <span>12 maanden</span>
+                    <span>Desktop &amp; mobiel</span>
+                    <span>Snelle navigatie</span>
+                </div>
+            </div>
+
+            <div class="hero-mark" aria-hidden="true">
+                <div class="hero-mark-inner">
+                    <img src="./assets/icons/Logo.webp" alt="" width="92" height="92">
+                    <span>EMB</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-section" id="kalender" aria-labelledby="calendar-title">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Maandkalender</span>
+                    <h2 id="calendar-title"><span id="monthTitle">Januari</span> 2026</h2>
+                </div>
+                <p id="calendarStatus" class="status" aria-live="polite">De kalender wordt geladen…</p>
+            </div>
+
+            <div class="calendar-layout">
+                <aside class="control-panel" aria-label="Kalenderbediening">
+                    <div class="control-card">
+                        <p class="control-label">Kies een maand</p>
+
+                        <div class="month-control">
+                            <button class="icon-button" id="previousMonth" type="button" aria-label="Vorige maand">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                            </button>
+
+                            <label class="select-wrap" for="maanden">
+                                <span class="sr-only">Maand</span>
+                                <select name="maanden" id="maanden">
+                                    <option value="1">Januari</option>
+                                    <option value="2">Februari</option>
+                                    <option value="3">Maart</option>
+                                    <option value="4">April</option>
+                                    <option value="5">Mei</option>
+                                    <option value="6">Juni</option>
+                                    <option value="7">Juli</option>
+                                    <option value="8">Augustus</option>
+                                    <option value="9">September</option>
+                                    <option value="10">Oktober</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+                            </label>
+
+                            <button class="icon-button" id="nextMonth" type="button" aria-label="Volgende maand">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="control-card quick-card">
+                        <p class="control-label">Snel naar</p>
+                        <div class="month-grid" id="monthGrid" aria-label="Alle maanden">
+                            <button type="button" data-month="1">Jan</button>
+                            <button type="button" data-month="2">Feb</button>
+                            <button type="button" data-month="3">Mrt</button>
+                            <button type="button" data-month="4">Apr</button>
+                            <button type="button" data-month="5">Mei</button>
+                            <button type="button" data-month="6">Jun</button>
+                            <button type="button" data-month="7">Jul</button>
+                            <button type="button" data-month="8">Aug</button>
+                            <button type="button" data-month="9">Sep</button>
+                            <button type="button" data-month="10">Okt</button>
+                            <button type="button" data-month="11">Nov</button>
+                            <button type="button" data-month="12">Dec</button>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-icon" aria-hidden="true">i</span>
+                        <div>
+                            <strong>Correctietabel</strong>
+                            <p>De regionale tijdsverschillen staan onderaan elke maandkalender.</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="calendar-viewer">
+                    <figure class="calendar-paper" id="calendarPaper">
+                        <div class="image-loader" aria-hidden="true"></div>
+                        <img
+                            src="./assets/images/1.png"
+                            id="gebedstijdenFoto"
+                            alt="Gebedskalender voor januari 2026"
+                            width="1448"
+                            height="2048"
+                            decoding="async"
+                        >
+                    </figure>
+
+                    <div class="viewer-actions" aria-label="Acties voor de kalender">
+                        <button class="secondary-button" id="openFullscreen" type="button">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>
+                            Volledig scherm
+                        </button>
+
+                        <a class="primary-button" id="downloadCalendar" href="./assets/images/1.png" download="gebedstijden-januari-2026.png">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></svg>
+                            Download maand
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-section" aria-labelledby="help-title">
+            <div>
+                <span class="eyebrow">Gebruiksvriendelijk</span>
+                <h2 id="help-title">Altijd snel de juiste maand</h2>
+            </div>
+            <div class="help-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Automatische maand</h3>
+                    <p>Bij het openen verschijnt meteen de kalender van de huidige maand.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Eenvoudig bladeren</h3>
+                    <p>Gebruik de pijlen, de maandkeuze of de sneltoetsen links en rechts.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Bewaren of delen</h3>
+                    <p>Download de geselecteerde maand als afbeelding of deel de maand via de URL.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="image-dialog" id="imageDialog" aria-labelledby="dialogTitle">
+        <div class="dialog-toolbar">
+            <div>
+                <span class="eyebrow">Volledige weergave</span>
+                <h2 id="dialogTitle"><span id="dialogMonthTitle">Januari</span> 2026</h2>
+            </div>
+            <button class="dialog-close" id="closeDialog" type="button" aria-label="Sluiten">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+        </div>
+        <div class="dialog-image-wrap">
+            <img src="./assets/images/1.png" id="dialogImage" alt="Gebedskalender voor januari 2026" width="1448" height="2048">
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <div class="footer-brand">
+                <img src="./assets/icons/Logo.webp" alt="" width="44" height="44">
+                <div>
+                    <strong>Gebedstijden 2026</strong>
+                    <span>Executief van de Moslims van België</span>
+                </div>
+            </div>
+            <p>&copy; 2026 — Rechten voorbehouden</p>
+            <a href="#boven">Terug naar boven <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
 </body>
 </html>
